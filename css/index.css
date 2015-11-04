@@ -1,0 +1,272 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif}h1,h2,h3,h4,h5,h6{font-size:100%;}address,cite,dfn,em,var{font-style:normal;}code,kbd,pre,samp{font-family:courier new,courier,monospace;}small{font-size:12px;}ul,ol{list-style:none;}a{text-decoration:none;}a:hover{text-decoration:underline;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}legend{color:#000;}fieldset,img{border:0;}button,input,select,textarea{font-size:100%;}table{border-collapse:collapse;border-spacing:0;}
+
+body,html{
+    height: 100%;
+}
+body {
+    text-align:center;
+    transition: background-color .5s ease-in;
+}
+
+a {
+    color:#808080;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.clearfix:after {
+    content: '\0020';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.layout {
+    padding-top: 10px;
+    width: 1200px;
+    margin: 0 auto;
+    color:#808080;
+}
+
+#header {
+    position:relative;
+    height: 110px;
+    padding-left: 168px;
+}
+#header .logo{
+    display:block;
+    width: 130px;
+    height: 110px;
+    float:left;
+    margin-left: -168px;
+    background:url(../img/logo.png) no-repeat 50% 50%;
+    background-size: 85px 80px;
+}
+
+#header .nav li{
+    float:left;
+    height: 110px;
+    line-height:110px;
+    font-size: 18px;
+    margin-right: 30px;
+}
+#header .nav li a{
+    
+}
+#header .nav li.current a{
+    color:#ff7551;
+}
+#header .turn-off {
+    position:absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -25px;
+    width: 51px;
+    height: 21px;
+}
+#header .turn-off a{
+    display:block;
+    width: 21px;
+    height: 21px;
+    position:absolute;
+    top: 0;
+    background-image:url(../img/turn-off.png);
+    background-repeat: no-repeat;
+    background-size: 51px 42px;
+    transition: background-position .2s ease-out;
+}
+#header .turn-off .change-day{
+    left: 0;
+    background-position: 0 0;
+}
+#header .turn-off .change-night{
+    right: 0;
+    background-position: 100% 100%;
+}
+
+#footer{
+    height: 40px;
+    line-height:40px;
+    text-align:left;
+}
+
+#scroll-wrapper {
+    height: 600px;
+    overflow:hidden;
+}
+.page {
+    height: 600px;
+    position:relative;
+}
+
+.about {
+    opacity: 0;
+    transition: opacity .8s linear .5s;
+}
+.about.current {
+    opacity: 1;
+}
+
+.service .service-list {
+    margin-right: -8px;
+}
+.service .service-list li{
+    float:left;
+    width: 292px;
+    height: 292px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border:1px solid rgba(203,203,203, .3);
+    text-align:center;
+    overflow:hidden;
+    opacity: 0;
+}
+.service.current .service-list li{
+    opacity: 1;
+}
+.service.current .service-list li:nth-child(1){ transition: opacity .8s linear; }
+.service.current .service-list li:nth-child(2){ transition: opacity .8s linear .2s; }
+.service.current .service-list li:nth-child(3){ transition: opacity .8s linear .4s; }
+.service.current .service-list li:nth-child(4){ transition: opacity .8s linear .6s; }
+.service.current .service-list li:nth-child(5){ transition: opacity .8s linear .8s; }
+.service.current .service-list li:nth-child(6){ transition: opacity .8s linear 1s; }
+.service.current .service-list li:nth-child(7){ transition: opacity .8s linear 1.2s; }
+.service .service-list li icon{
+    display:block;
+    width:93px;
+    height:93px;
+    background-image: url(../img/service-icon.png);
+    background-repeat: no-repeat;
+    background-size: 1000px 400px;
+    margin: 50px auto 15px auto;
+    transform: rotate(0deg);
+    transition: transform .3s ease-in;
+}
+.service .service-list li:hover icon{
+    transform: rotate(30deg);
+}
+.service .service-list li icon.plan{
+    background-position: 0 0;
+}
+.service .service-list li icon.implement{
+    background-position: -303px 0;
+}
+.service .service-list li icon.meeting{
+    background-position: -604px 0;
+}
+.service .service-list li icon.diy{
+    background-position: -907px 0;
+}
+.service .service-list li icon.repast{
+    background-position: 0 -307px;
+}
+.service .service-list li icon.buy-food{
+    background-position: -302px -307px;
+}
+.service .service-list li icon.clean{
+    background-position: -604px -307px;
+}
+.service .service-list li h4{
+    font-size:24px;
+    height:45px;
+    line-height: 45px;
+    font-weight:400;
+}
+.service .service-list li p{
+    padding: 0 20px;
+    line-height: 1.6;
+    font-size: 12px;
+}
+.space {
+    opacity: 0;
+    transition: opacity .8s linear .5s;
+}
+.space ul.space-menu{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 100px;
+    z-index: 99;
+}
+.space ul.space-menu li{
+    height: 30px;
+    line-height:30px;
+    background:rgba(128,128,128,.5);
+    color:#fff;
+    text-align:center;
+    font-size: 14px;
+    margin-bottom:5px;
+}
+.space ul.space-menu li.selected{
+    background:rgba(255,117,81,.8);
+}
+.space .pic-show{
+    height:600px;
+    background-repeat: no-repeat;
+    background-size: 1200px 600px;
+    transition: opacity .8s linear;
+}
+.space .pic-show.hide{
+    opacity:0;
+}
+.space .pic-show.show{
+    opacity:1;
+}
+.space.current{
+    opacity: 1;
+}
+
+.address .map{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 1200px;
+    height:600px;
+    background:url(../img/map-bg.png) no-repeat 50% 50%;
+    background-size: 1105px 565px;
+    opacity: 0;
+    transition: opacity .5s ease-in;
+}
+.address .path{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 1200px;
+    height: 600px;
+    background: url(../img/map-path.png) no-repeat 406px 182px;
+    background-size: 384px 309px;
+    transform: scale(1.5, 1.5);
+    opacity: 0;
+    transition: opacity .5s ease-in, transform .5s ease-in .5s;
+}
+.address .zizai{
+    position:absolute;
+    right:395px;
+    top:18px;
+    width: 50px;
+    height:47px;
+    background:url(../img/logo.png) no-repeat 0 0;
+    background-size: 50px 47px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .5s ease-in .3s, transform .5s ease-in .3s;
+}
+.address.current .map{
+    opacity: 1;
+}
+.address.current .path{
+    opacity: 1;
+    transform: scale(1, 1);
+
+}
+.address.current .zizai{
+    opacity:1;
+    transform: translateY(0);
+}

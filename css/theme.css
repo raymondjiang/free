@@ -1,0 +1,63 @@
+.day{
+    background:#fff;
+}
+.day #header .turn-off .change-day {
+    background-position: 0 -21px;
+}
+.day #header .turn-off .change-night {
+    background-position: 100% 0;
+}
+
+
+.night{
+    background:#000;
+}
+.night #header .turn-off .change-day {
+    background-position: 0 0;
+}
+.night #header .turn-off .change-night {
+    background-position: 100% -21px;
+}
+
+.day .about {
+    background:url(../img/home-day.jpg) no-repeat 0 0;
+    background-size: 1200px 600px;
+}
+
+.night .about {
+    background:url(../img/home-night.jpg) no-repeat 0 0;
+    background-size: 1200px 600px;
+}
+
+
+.day .space .pic-show[data-class="01"] {
+    background-image:url(../img/space-day-01.jpg);
+}
+.day .space .pic-show[data-class="02"] {
+    background-image:url(../img/space-day-02.jpg);
+}
+.day .space .pic-show[data-class="03"] {
+    background-image:url(../img/space-day-03.jpg);
+}
+.day .space .pic-show[data-class="04"] {
+    background-image:url(../img/space-day-04.jpg);
+}
+.day .space .pic-show[data-class="05"] {
+    background-image:url(../img/space-day-05.jpg);
+}
+
+.night .space .pic-show[data-class="01"] {
+    background-image:url(../img/space-night-01.jpg);
+}
+.night .space .pic-show[data-class="02"] {
+    background-image:url(../img/space-night-02.jpg);
+}
+.night .space .pic-show[data-class="03"] {
+    background-image:url(../img/space-night-03.jpg);
+}
+.night .space .pic-show[data-class="04"] {
+    background-image:url(../img/space-night-04.jpg);
+}
+.night .space .pic-show[data-class="05"] {
+    background-image:url(../img/space-night-05.jpg);
+}

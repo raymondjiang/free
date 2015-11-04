@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>自在</title>
+<link rel="stylesheet" href="./css/index.css"/>
+<link rel="stylesheet" href="./css/theme.css"/>
+<script type="text/javascript" src="./js/lib/sea.js"></script>
+</head>
+
+<body>
+<script>
+    var date = new Date(), hour = date.getHours(), body = document.body;
+    if (hour >= 8 && hour <= 18) {
+        body.className = 'day';
+    } else {
+        body.className = 'night';
+    }
+</script>
+
+<div class="layout">
+    <header id="header">
+        <a href="#" class="logo"></a>
+        <ul class="nav clearfix" id="J_nav">
+            <li data-menu="about" class="current"><a href="#about">关于自在</a></li>
+            <li data-menu="space"><a href="#space">空间</a></li>
+            <li data-menu="service"><a href="#service">服务</a></li>
+            <li data-menu="address"><a href="#address">地址</a></li>
+            <li><span>预订电话：18510031731</span></li>
+        </ul>       
+        <div class="turn-off">
+            <a href="#" class="change-day"></a>
+            <a href="#" class="change-night"></a>
+        </div>
+    </header>
+    <section id="scroll-wrapper">
+        <div class="main">
+            <!--关于自在-->
+            <div id="J_about" class="page about" data-menu="about"></div>
+            <!--/关于自在-->
+            <!--空间-->
+            <div id="J_space" class="page space" data-menu="space">
+                <ul class="space-menu">
+                    <li data-target="01" class="selected"><span>大厅</span></li>
+                    <li data-target="02"><span>厨房</span></li>
+                    <li data-target="03"><span>棋牌室</span></li>
+                    <li data-target="04"><span>休闲台</span></li>
+                    <li data-target="05"><span>露台</span></li>
+                </ul>
+                <div class="pic-show show" data-class="01"></div>
+            </div>
+            <!--/空间-->
+            <!--服务-->
+            <div id="J_service" class="page service" data-menu="service">
+                <ul class="service-list clearfix">
+                    <li>
+                        <icon class="plan"></icon>
+                        <h4>活动策划</h4>
+                        <p>提供各类主题活动策划，生日会、家庭聚会、
+同学聚会、私人派对、团队会议、小型沙龙、
+秘密约会、求婚，令来宾拥有难忘的体验。</p>
+                    </li>
+                    <li>
+                        <icon class="implement"></icon>
+                        <h4>活动执行</h4>
+                        <p>专业活动执行团队，追求接近极致的服务</p>
+                    </li>
+                    <li>
+                        <icon class="meeting"></icon>
+                        <h4>会议服务</h4>
+                        <p>会议器材，会议准备，茶歇</p>
+                    </li>
+                    <li>
+                        <icon class="diy"></icon>
+                        <h4>DIY厨房</h4>
+                        <p>厨房提供炊具、餐具，常用佐料，可供多人同
+时使用</p>
+                    </li>
+                    <li>
+                        <icon class="repast"></icon>
+                        <h4>餐饮服务</h4>
+                        <p>茶歇、下午茶、工作餐、自助餐、定制餐饮、
+特邀厨师。</p>
+                    </li>
+                    <li>
+                        <icon class="buy-food"></icon>
+                        <h4>代购食材</h4>
+                        <p>可根据来宾烹饪要求代购所需食材。</p>
+                    </li>
+                    <li>
+                        <icon class="clean"></icon>
+                        <h4>食材料理</h4>
+                        <p>可协助对食材进行清洗及简单切割</p>
+                    </li>
+                </ul>
+            </div>
+            <!--/服务-->
+            <!--地址-->
+            <div id="J_address" class="page address" data-menu="address">
+                <div class="map"></div>
+                <div class="path"></div>
+                <div class="zizai"></div>
+            </div>
+            <!--/地址-->
+        </div>
+    </section>
+    <footer id="footer">&copy; 2014 izizai.com.cn   北京朝阳区半截塔村55号七棵树创意园C9-5</footer>
+</div>
+
+<script>
+    seajs.use('./js/app', function(App){
+        new App(); 
+    })
+</script>
+</body>
+</html>
